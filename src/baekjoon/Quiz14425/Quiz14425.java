@@ -3,7 +3,7 @@ package baekjoon.Quiz14425;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// 전체 시간 복잡도: O(M*logN)
+// 전체 시간 복잡도: O(M*L*logN) L --> 문자열 길이
 public class Quiz14425 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
