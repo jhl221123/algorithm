@@ -1,4 +1,4 @@
-package baekjoon.Quiz15654;
+package baekjoon.Quiz15654_7;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
