@@ -3,7 +3,7 @@ package baekjoon.Quiz15654_7;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// 전체 시간 복잡도: O(2^N)??
+// 전체 시간 복잡도: O(N!/M!)
 public class Quiz15655 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

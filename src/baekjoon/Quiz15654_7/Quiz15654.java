@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// 전체 시간 복잡도: O(N^M)
+// 전체 시간 복잡도: O(N!)
 public class Quiz15654 {
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
