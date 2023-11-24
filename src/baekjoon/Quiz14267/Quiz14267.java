@@ -1,4 +1,4 @@
-package Quiz14267;
+package baekjoon.Quiz14267;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
