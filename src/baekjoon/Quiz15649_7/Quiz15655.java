@@ -1,4 +1,4 @@
-package baekjoon.Quiz15654_7;
+package baekjoon.Quiz15649_7;
 
 import java.util.Arrays;
 import java.util.Scanner;
