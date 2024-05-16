@@ -3,7 +3,7 @@ package baekjoon.Quiz14501;
 import java.util.*;
 import java.io.*;
 
-public class Quiz14501 {
+public class Quiz14501_DP {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
