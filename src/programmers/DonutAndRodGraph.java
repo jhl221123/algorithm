@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class KAKAO_WINTER_INTERNSHIP_2024 {
+public class DonutAndRodGraph {
 	static List<List<Integer>> list;
 	static int[] outDegree;
 	static int[] inDegree;
