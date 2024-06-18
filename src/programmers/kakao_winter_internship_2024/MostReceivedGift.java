@@ -1,4 +1,4 @@
-package programmers;
+package programmers.kakao_winter_internship_2024;
 
 import java.util.*;
 
