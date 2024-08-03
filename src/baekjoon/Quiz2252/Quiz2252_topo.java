@@ -3,7 +3,7 @@ package baekjoon.Quiz2252;
 import java.util.*;
 import java.io.*;
 
-public class Quiz2252 {
+public class Quiz2252_topo {
 	static int N;
 	static int M;
 	static List<Integer>[] tree;
