@@ -28,48 +28,48 @@ public class Quiz20055 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
-		Conveyer conveyer = new Conveyer(N * 2);
+		Conveyor conveyor = new Conveyor(N * 2);
 		int round = 1;
 
 		// 컨베이어 벨트 초기화
 		st = new StringTokenizer(br.readLine());
 		for(int i=0; i<N*2; i++) {
-			conveyer.addTile(new Tile(i, Integer.parseInt(st.nextToken()), false));
+			conveyor.addTile(new Tile(i, Integer.parseInt(st.nextToken()), false));
 		}
 
 		while(true) {
-			conveyer.rotate();
-			conveyer.removeRobot();
-			conveyer.moveRobot();
-			conveyer.addRobot();
-			if(!conveyer.healthCheck(K)) break;
+			conveyor.rotate();
+			conveyor.removeRobot();
+			conveyor.moveRobot();
+			conveyor.addRobot();
+			if(!conveyor.healthCheck(K)) break;
 			round++;
 		}
 
 		System.out.println(round);
 	}
 
-	static class Conveyer {
-		LinkedList<Tile> conveyer;
+	static class Conveyor {
+		LinkedList<Tile> conveyor;
 		int total;
 		int half;
 
-		public Conveyer(int total) {
-			this.conveyer = new LinkedList<>();
+		public Conveyor(int total) {
+			this.conveyor = new LinkedList<>();
 			this.total = total;
 			this.half = total / 2;
 		}
 
 		public void addTile(Tile tile) {
-			conveyer.add(tile);
+			conveyor.add(tile);
 		}
 
 		public void rotate() {
-			conveyer.addFirst(conveyer.removeLast());
+			conveyor.addFirst(conveyor.removeLast());
 		}
 
 		public void addRobot() {
-			Tile startTile = conveyer.get(0);
+			Tile startTile = conveyor.get(0);
 			if(startTile.enoughLife()) {
 				startTile.reduceLife(1);
 				startTile.addRobot();
@@ -77,15 +77,15 @@ public class Quiz20055 {
 		}
 
 		public void removeRobot() {
-			Tile endTile = conveyer.get(half-1);
+			Tile endTile = conveyor.get(half-1);
 			endTile.removeRobot();
 		}
 
 		public void moveRobot() {
 			for(int i=half-2; i>=0; i--) {
-				Tile tile = conveyer.get(i);
+				Tile tile = conveyor.get(i);
 				if(tile.hasRobot()) {
-					Tile next = conveyer.get(i+1);
+					Tile next = conveyor.get(i+1);
 					if(!next.hasRobot() && next.enoughLife()) {
 						next.reduceLife(1);
 						next.addRobot();
@@ -99,7 +99,7 @@ public class Quiz20055 {
 		public boolean healthCheck(int limit) {
 			int count = 0;
 
-			for(Tile tile : conveyer) {
+			for(Tile tile : conveyor) {
 				if(!tile.enoughLife()) {
 					count++;
 				}
